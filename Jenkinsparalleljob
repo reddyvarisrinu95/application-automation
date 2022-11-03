@@ -1,39 +1,39 @@
-pipeline{
+// pipeline{
     
-    agent any
+//     agent any
     
-    tools{
-        maven 'maven3.8.5'
-    }
+//     tools{
+//         maven 'maven3.8.5'
+//     }
 
-stages{
-//Get the code from GitHub
-    stage('CheckoutCode'){
-	steps{
+// stages{
+// //Get the code from GitHub
+//     stage('CheckoutCode'){
+// 	steps{
 	   
-	git branch: 'master', credentialsId: '4368c281-f352-4495-89c1-730c9742fca9', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
-	}
-	}
+// 	git branch: 'master', credentialsId: '4368c281-f352-4495-89c1-730c9742fca9', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+// 	}
+// 	}
   
-  //Run Junt Test cases & Do the Build
+//   //Run Junt Test cases & Do the Build
   
-  stage('RunUnitTestcases&Build'){
-  steps{
-  parallel(
-   RunUnitTestCases: {
-   sh "mvn test"
-   },
+//   stage('RunUnitTestcases&Build'){
+//   steps{
+//   parallel(
+//    RunUnitTestCases: {
+//    sh "mvn test"
+//    },
    
-   Build: {
-   sh "mvn clean package"
-   }
+//    Build: {
+//    sh "mvn clean package"
+//    }
   
-  )
-  }
-  }
+//   )
+//   }
+//   }
   
   
   
-}// Stages Closing
+// }// Stages Closing
   
-}// Pipelien CLosing
+// }// Pipelien CLosing
