@@ -16,7 +16,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git 'master' git@github.com:reddyvarisrinu95/maven-web-application.git'
+    git 'master' url:'git@github.com:reddyvarisrinu95/maven-web-application.git'
 	
 	}
   }
