@@ -7,7 +7,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    sh "git main url:https://github.com/reddyvarisrinu95/application-automation.git"
+    sh "git clone https://github.com/reddyvarisrinu95/application-automation.git"
 	
 	}
   }
