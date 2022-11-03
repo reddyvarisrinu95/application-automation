@@ -33,7 +33,7 @@ stages{
   stage('DeployAppIntoTomcat'){
   steps{
    
-   sh "scp target/maven-web-application.war root@172.31.43.191:/opt/apache-tomcat-9.0.50/webapps/"    
+   sh "scp target/maven-web-application.war root@172.31.43.191:/opt/tomcat9/webapps/"    
   
   }
   }
